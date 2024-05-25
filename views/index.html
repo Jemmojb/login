@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, <span id="user-name"></span>!</h1>
+        <form action="/logout?_method=DELETE" method="POST">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('user-name').textContent = localStorage.getItem('userName');
+    </script>
+</body>
+</html>
